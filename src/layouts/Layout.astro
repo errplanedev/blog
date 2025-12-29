@@ -2,152 +2,181 @@
 const { title } = Astro.props;
 
 const aaa = [
-	{
-		alt: "LateTheIdiot's 88x31 button",
-		image: 'https://latetheidiot.neocities.org/images/88x31/late88x31.png',
-		link: 'https://latetheidiot.neocities.org/'
-	},
-	{
-		alt: 'lily',
-		image: 'https://tauon.dev/images/88x31/lily.png',
-		link: 'https://tauon.dev'
-	},
-	{
-		alt: '8bitosc.net',
-		image: 'https://8bitosc.net/img/88x31/jay.gif',
-		link: 'https://8bitosc.net/'
-	},
-	{
-		alt: '7vector, a very cool creature',
-		image: 'https://7vector.neocities.org/7vector88x31.gif',
-		link: 'https://7vector.neocities.org/'
-	},
-	{
-		alt: 'piracy is cool',
-		image: '/88x31s/piracy.gif',
-	},
-	{
-		alt: 'government bad',
-		image: '/88x31s/anarchy.gif'
-	},
-	{
-		alt: 'a very cool content blocker',
-		image: '/88x31s/ublock.png',
-		link: 'https://ublockorigin.com/'
-	},
-	{
-		alt: 'the world wide web!',
-		image: '/88x31s/www.gif',
-		link: 'https://info.cern.ch/hypertext/WWW/TheProject.html'
-	},
-	{
-		alt: 'DOOM',
-		image: '/88x31s/doomrl.gif'
-	}
+    {
+        alt: "LateTheIdiot's 88x31 button",
+        image: "https://latetheidiot.neocities.org/images/88x31/late88x31.png",
+        link: "https://latetheidiot.neocities.org/",
+    },
+    {
+        alt: "lily",
+        image: "https://tauon.dev/images/88x31/lily.png",
+        link: "https://tauon.dev",
+    },
+    {
+        alt: "8bitosc.net",
+        image: "https://8bitosc.net/img/88x31/jay.gif",
+        link: "https://8bitosc.net/",
+    },
+    {
+        alt: "7vector, a very cool creature",
+        image: "https://7vector.neocities.org/7vector88x31.gif",
+        link: "https://7vector.neocities.org/",
+    },
+    {
+        alt: "piracy is cool",
+        image: "/88x31s/piracy.gif",
+    },
+    {
+        alt: "government bad",
+        image: "/88x31s/anarchy.gif",
+    },
+    {
+        alt: "a very cool content blocker",
+        image: "/88x31s/ublock.png",
+        link: "https://ublockorigin.com/",
+    },
+    {
+        alt: "the world wide web!",
+        image: "/88x31s/www.gif",
+        link: "https://info.cern.ch/hypertext/WWW/TheProject.html",
+    },
+    {
+        alt: "DOOM",
+        image: "/88x31s/doomrl.gif",
+    },
+    {
+        alt: "I use he/they pronouns",
+        image: "88x31s/hethey.png",
+    },
 ];
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="dour.com is the best ever website no doubt" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title} :: dour.com</title>
-	</head>
-	<body transition:animate="none">
-		<nav style="border-bottom: 2px solid green;">
-			<a href="/" style="background-color: black; color: green; text-decoration: none;">
-				<h1>dour.com</h1>
-			</a>
-			<a href="/">about</a>
-			<a href="/posts">blog</a>
-			<a href="https://freesoftware.club">freesoftware.club</a>
-			<br>
-			<br>
-		</nav>
-		<slot />
-		<br>
-		<br>
-		<footer style="border-top: 2px solid green; text-align: center;">
-			<p>funny counter thing:</p>
-			<iframe src="//incr.easrng.net/badge?key=dour.com" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
-			<p>88x31s</p>
-			{aaa.map((b) => (
-				<a href={b.link} style="background-color: black; color: green; margin-left: 1px; text-decoration: none;" target="_blank">
-					<img src={b.image} alt={b.alt} title={b.alt} style="cursor: url('/pointer.png'), pointer; image-rendering: pixelated;">
-				</a>
-			))}
-		</footer>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="dour.com is the best ever website no doubt"
+        />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title} :: dour.com</title>
+    </head>
+    <body transition:animate="none">
+        <nav style="border-bottom: 2px solid green;">
+            <a
+                href="/"
+                style="background-color: black; color: green; text-decoration: none;"
+            >
+                <h1>dour.com</h1>
+            </a>
+            <a href="/">about</a>
+            <a href="/posts">blog</a>
+            <a href="https://freesoftware.club">freesoftware.club</a>
+            <br />
+            <br />
+        </nav>
+        <slot />
+        <br />
+        <br />
+        <footer style="border-top: 2px solid green; text-align: center;">
+            <p>funny counter thing:</p>
+            <iframe
+                src="//incr.easrng.net/badge?key=dour.com"
+                style="background: url(//incr.easrng.net/bg.gif)"
+                title="increment badge"
+                width="88"
+                height="31"
+                frameborder="0"></iframe>
+            <p>88x31s</p>
+            {
+                aaa.map((b) => (
+                    <a
+                        href={b.link}
+                        style="background-color: black; color: green; margin-left: 1px; text-decoration: none;"
+                        target="_blank"
+                    >
+                        <img
+                            src={b.image}
+                            alt={b.alt}
+                            title={b.alt}
+                            style="cursor: url('/pointer.png'), pointer; image-rendering: pixelated;"
+                        />
+                    </a>
+                ))
+            }
+        </footer>
+    </body>
 </html>
 <style is:global>
-	@font-face {
-		font-family: 'ibm_vga';
-		src: url('/PxPlus_IBM_VGA8.ttf');
-	}
+    @font-face {
+        font-family: "ibm_vga";
+        src: url("/PxPlus_IBM_VGA8.ttf");
+    }
 
-	body, html {
-		margin: 0;
-		padding: 0;
-		font-size: 100%;
-	}
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+    }
 
-	* {
-		box-sizing: border-box;
-		cursor: url('/cursor.png'), default;
-		font-weight: 400 !important;
-	}
+    * {
+        box-sizing: border-box;
+        cursor: url("/cursor.png"), default;
+        font-weight: 400 !important;
+    }
 
-	nav h1, nav a {
-		cursor: url('/pointer.png'), pointer;
-		display: inline;
-		padding: 10px;
-	}
+    nav h1,
+    nav a {
+        cursor: url("/pointer.png"), pointer;
+        display: inline;
+        padding: 10px;
+    }
 
-	nav a  {
-		margin-left: 10px;
-	}
+    nav a {
+        margin-left: 10px;
+    }
 
-	body {
-		font-family: 'ibm_vga', serif;
-		width: 900px;
-		margin: auto;
-		padding-top: 20px;
-		padding-left: 40px;
-		background-color: black;
-		color: green;
-		border-left: green 2px solid;
-		border-right: green 2px solid;
-		height: 100vh;
-	}
+    body {
+        font-family: "ibm_vga", serif;
+        width: 900px;
+        margin: auto;
+        padding-top: 20px;
+        padding-left: 40px;
+        background-color: black;
+        color: green;
+        border-left: green 2px solid;
+        border-right: green 2px solid;
+        height: 100vh;
+    }
 
-	::selection {
-		background-color: green;
-		color: black;
-	}
+    ::selection {
+        background-color: green;
+        color: black;
+    }
 
-	a {
-		cursor: url('/pointer.png'), pointer;
-		color: black;
-		background-color: green;
-		padding: 5px;
-	}
+    a {
+        cursor: url("/pointer.png"), pointer;
+        color: black;
+        background-color: green;
+        padding: 5px;
+    }
 
-	a:hover {
-		text-decoration: none;
-	}
+    a:hover {
+        text-decoration: none;
+    }
 
-	a::selection {
-		background-color: black;
-		color: green;
-	}
+    a::selection {
+        background-color: black;
+        color: green;
+    }
 
-	article a  {
-		background-color: inherit;
-		color: green;
-		padding: 0px;
-	}
+    article a {
+        background-color: inherit;
+        color: green;
+        padding: 0px;
+    }
 </style>
